@@ -1,0 +1,54 @@
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+
+server:
+  servlet:
+    session:
+      cookie:
+        name: MY_SESSION_ID
+        http-only: true # يمنع JavaScript من قراءة الكوكي (يحمي من XSS)
+        secure: false
+        same-site: lax
+      timeout: 40m
+
+    context-path: /api
+
+spring:
+  application:
+    name: final_project
+
+  security:
+    user:
+      name: user
+      password: 1234
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/final_project?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: 19882003Obaeda?
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+  sql:
+    init:
+      mode: never   # لو رح تستخدم Flyway
+
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: never
+      table-name: SPRING_SESSION
+      save-mode: on_set_attribute # update DB when only update any field just
+      cleanup-cron: "0 */10 * * * *"   # clean up the expired  session
