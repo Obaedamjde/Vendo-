@@ -71,7 +71,7 @@ src/main/java/com/aabu/finalproject
 │   ├── GlobalExceptionHandler
 │   └── SecurityConfig
 └── FinalProjectApplication.java
-
+```
 
 ## How to Run
 1. Clone or download the repository
