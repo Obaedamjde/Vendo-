@@ -35,6 +35,7 @@ The project follows a layered architecture:
 ## Project Structure
 The project is organized following standard Spring Boot best practices to ensure scalability, maintainability, and clear separation of concerns.
 
+```text
 src/main/java/com/aabu/finalproject
 ├── controller
 │   └── REST controllers handling HTTP requests and responses
@@ -54,35 +55,22 @@ src/main/java/com/aabu/finalproject
 │   │   │   └── DTOs dedicated for partial or full update operations
 │   │   └── common
 │   │       ├── ApiError
-│   │       │   └── Standardized API error response model
 │   │       ├── PageReqDTO
-│   │       │   └── Pagination request data transfer object
 │   │       └── PageResponse
-│   │           └── Standardized paginated API response
 │   ├── enums
-│   │   └── Enumerations representing fixed application constants and states
+│   │   └── Fixed application constants and states
 │   └── exception
 │       └── Custom application exceptions and error handling logic
 ├── utility
 │   ├── PageUtil
-│   │   └── Utility class for pagination handling
 │   └── UserSession
-│       └── User session management utilities
-├── security
-│   └── Security-related components (filters, handlers, helpers)
 ├── config
 │   ├── AuthService
-│   │   └── Authentication and authorization services
 │   ├── CustomUserDetails
-│   │   └── Custom implementation of Spring Security UserDetails
 │   ├── CustomUserDetailsService
-│   │   └── Loads user-specific data for authentication
 │   ├── GlobalExceptionHandler
-│   │   └── Centralized exception handling using @ControllerAdvice
 │   └── SecurityConfig
-│       └── Spring Security configuration and access rules
 └── FinalProjectApplication.java
-    └── Main Spring Boot application entry point
 
 
 ## How to Run
