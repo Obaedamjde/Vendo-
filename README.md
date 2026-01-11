@@ -90,7 +90,7 @@ src/main/java/com/aabu/finalproject
 - Frontend is not included in this repository.
 
 ## Author
-- Student: (Your Name)
+- Student: Obaeda Majde
 - University: Al-Albayt University
 - Faculty: Information Technology
 - Year: 2025
